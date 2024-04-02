@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    background-image: url("../images/TATLI.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#header {
+    background-image: linear-gradient(to right, #2a6088, #5b64a1, #9861a8, #cf5a96, #fa605f, #fa605f, #fa6f35, #fa6f35, #f95e3b, #f2394a, #f2394a, #ed2152);
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+a{
+    position: relative;
+
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    width: max-content;
+}
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17.5rem, 1.5fr));
+    justify-content: center;
+    gap:100px 100px ;
+    padding: 0 4rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+#sehiradim{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    font-size: xx-large;
+    text-transform: uppercase;
+    width: 300px;
+    height: 50px;
+    background-color: rgba(22, 8, 112, 0.305);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: auto;
+    margin-block: 50px;
+    color: white;
+    font-family:'salsa', Coruier ;
+}
+
+.card{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0  8px 0 black;
+}
+.card:hover img{
+    transform: rotate(-10deg) scale(1.2);
+}
+.card:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+
+
+}
+.card img{
+    width: 100%;
+
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: .4s ease;
+
+    
+}
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    backdrop-filter: blur(10px); 
+    padding: 1rem 0 1.5rem 1rem;
+    
+    
+}
+h2{
+    font-family: 'Salsa', cursive;
+    font-weight: lighter;
+    margin: 0;
+    }

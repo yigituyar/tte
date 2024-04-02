@@ -1,0 +1,175 @@
+#header{
+    height: 50px;
+    background-image: linear-gradient(to right, #2a6088, #5b64a1, #9861a8, #cf5a96, #fa605f, #fa605f, #fa6f35, #fa6f35, #f95e3b, #f2394a, #f2394a, #ed2152);
+    padding-top: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.107);
+    box-shadow: 0px 10px 41px 0px rgba(0,0,0,.6);
+    z-index: 9999 !important;
+    position:relative;
+}
+#all{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/TATLI.png");
+    background-size: cover;
+    background-position: 0 50px;
+    background-attachment: fixed;
+    z-index: 312;
+    transition-delay: 0s;
+    transition: .1s;
+    
+}
+
+
+#title{
+
+    /* border: 1px solid black; */
+    line-height: 6vmin;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    border-radius: 20px;
+    height: 70vh;
+    width: 70vw;
+    margin-top: 10vh;
+    font-family: 'Karma', serif;
+    font-weight:300;
+    font-size: 4vmin;
+    text-align: center;
+    letter-spacing: 10px;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+#searchbox{
+    border: 2px solid white ;
+    width: 200px;
+    height: 30px;
+    text-align: right;
+
+    padding: 5px;
+    margin:auto;
+    border-radius: 10px;
+    background-color: rgb(192, 186, 186) ;
+    transition: .5s;
+}
+#searchbox:hover{
+    background-color: rgb(247, 219, 180)  ;
+    cursor: pointer;
+}
+.tat{
+    display: inline-block;
+    font-weight:bolder; 
+    background-color: aqua;
+    color: white;
+
+    width: 150px;
+    text-align: center;
+    padding: 4px;
+    margin-right: 23px;
+    border-radius: 30px;
+    letter-spacing: 1.5px;
+
+    animation: myAnim .7s cubic-bezier(0.64, 0, 0.78, 0) 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: rotateX(-100deg);
+		transform-origin: top;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateX(0deg);
+		transform-origin: top;
+	}
+}
+#content{
+
+    /* border: 1px solid black; */
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 20px;
+    height: 93vh;
+
+    
+}
+
+body{
+    margin:0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+*{
+    scroll-behavior:smooth !important;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.slidebutton{   
+    letter-spacing: normal;
+    background-color:rgba(234, 244, 247, 0.5);
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    width:fit-content;
+    border-radius: 20px;
+    font-family: 'Karma', serif;
+    font-weight: light;
+    font-size: 25px;
+    min-width: 40%;
+
+}
+#slidebottom{
+    min-width: 20%;
+    backdrop-filter: blur(10px);
+}
+.slide{
+    justify-content: center;
+
+}
+
+.tatli{
+    background-color: #0e56e5;
+
+}
+.tuzlu{
+    background-color: #F9842E;
+    color: black;
+
+}
+.eksi{
+    background-color: #ED2152;
+
+}
+#map{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.arrow{
+    position:relative;
+}
+#pills{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.svg-turkiye-haritasi{
+    backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding:0 60px;
+}

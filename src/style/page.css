@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Dancing+Script&family=Major+Mono+Display&family=Work+Sans&display=swap");
+:root {
+  --bg-color: #fffdd8;
+  --color-1: #f73606;
+  --color-2: #ff2205;
+  --color-3: rgb(255, 72, 0);
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Grid öğelerini stilize et */
+#header {
+  background-image: linear-gradient(to right, #2a6088, #5b64a1, #9861a8, #cf5a96, #fa605f, #fa605f, #fa6f35, #fa6f35, #f95e3b, #f2394a, #f2394a, #ed2152);
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+#infos,
+#search {
+  background-color: var(--color-2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#searchbox__container {
+  position: relative;
+  display: flex;
+  transform-origin: 50% 50%;
+  margin: auto;
+  width: 400px;
+  max-height: 50px;
+  border: 1px solid var(--bg-color);
+  align-items: center;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background-color: #ebebeb;
+  border-radius: 10px;
+}
+#icon__search {
+  height: 20px;
+  margin: auto;
+  padding: 0;
+}
+#searchbox {
+  outline: none;
+  margin: 10px;
+  margin-right: 0px;
+  display: inline;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 30px;
+
+  border: 0;
+  background-color: transparent;
+  color: black;
+  font-family: "Cinzel", serif;
+  font-size: x-large;
+}
+#searchbox::placeholder {
+  font-size: smaller;
+}
+#searchbox__button {
+  display: inline;
+  border: none;
+  cursor: pointer;
+  background-color: #f73606;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  float: right;
+  width: 50px;
+  max-height: 50px;
+  height: 50px;
+}
+#content {
+  display: flex;
+  flex-direction: column;
+}
+.content-row {
+  display: flex;
+  flex-direction: row;
+  width: 960px;
+ 
+  margin:  20px auto;
+}
+.content-row:first-child {
+  justify-content: center;
+}
+.content-row:last-child {
+  min-height: 100vh;
+  border-top: 1px solid rgba(0, 0, 0, 0.363);
+}
+.content-col {
+  display: flex;
+}
+.content-col:first-child {
+  flex-basis: calc(100% * (2.3 / 3));
+  flex-direction: column;
+}
+.content-col:last-child {
+  align-items: baseline;
+  padding-top: 26px;
+  flex-basis: calc(100% * (0.7 / 3));
+}
+#img-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#yemekFoto {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+#img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-180deg, transparent 3%, #000);
+  width: 100%;
+  height: 60%;
+  opacity: 0.6;
+}
+#meal-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 1px 2px 3px #4c4c4c;
+}
+
+#yemektarif {
+  width: 600px;
+}
+.yemektarif-content {
+  text-align: justify;
+  text-indent: 2rem;
+  letter-spacing: 2px;
+  line-height: 30px;
+  display: block;
+}
+
+/* --------------- YEMEK LİSTESİ -----------------------  */
+#list-header{
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+    padding: 25px;
+  border-radius:  10px  10px 0px 0px;
+
+    text-transform:capitalize;
+}
+
+#meal-list{
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#meal-list ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#meal-list li:last-child,
+#meal-list li:nth-child(1),
+#meal-list li:nth-child(2),
+#meal-list li:nth-child(3),
+#meal-list li:nth-child(4){
+  display: block;
+}
+#meal-list li:last-child a{
+  text-align: center;
+  justify-content: center;
+  padding: 25px;
+  cursor:pointer;
+  border-radius: 0px 0px 10px  10px;
+  background-color: #000000de;
+
+}
+#meal-list li:last-child {
+ 
+  border-radius: 0px 0px 10px  10px;
+
+}
+#meal-list li {
+    background-color: #313131;
+    display: none;
+    color: white;
+
+}
+
+
+#meal-list a>*{
+    flex-basis: 50%;
+}
+
+#meal-list a{
+  display: flex;
+  color: white;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.158);
+  padding: 10px 5px;
+    text-decoration: none;
+}
+.list-foto{
+    height:auto;
+     width:150px;
+     display: block;
+}
+.list-yemekadi{
+    text-align: center;
+}
+/*--------------FOOTER-------------*/
+
+#footer{
+    background-image: linear-gradient(to right top, #2a6088, #5b64a1, #9861a8, #cf5a96, #fa605f, #fa605f, #fa6f35, #fa6f35, #f95e3b, #f2394a, #f2394a, #ed2152);
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+
+}
+#footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer li{
+padding: 10px 0;
+margin: 0;
+}
